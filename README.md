@@ -13,7 +13,20 @@ A advanced configuration for liferay comunity GA 112 for kubernetes
    - `jgroupsliferay-transport.xml`
    - `statefulset.yaml`
 
+ Examples of BASE64 secrets:
+
+ - IRL `jdbc:mysql://192.168.1.211/liferay`, run this command:
+   ```bash
+   echo -n "jdbc:mysql://192.168.1.211/liferay" | base64
+   ```
+   The terminal will return:
+   ```
+   bG9yZWZheXM6Ly8xOTIuMTY4LjEuMjExL2xpZmVyYXk=
+   ```
+ Do this for each of the secrets before placing them in `secrets.yaml`.
+
  Configure the database connection secrets in the `secrets.yaml` file, including:
    - URL
    - Password
    - User
+
