@@ -15,7 +15,7 @@ A advanced configuration for liferay comunity GA 112 for kubernetes
 
  Examples of BASE64 secrets:
 
- - IRL `jdbc:mysql://192.168.1.211/liferay`, run this command:
+ - URL `jdbc:mysql://192.168.1.211/liferay`, run this command:
    ```bash
    echo -n "jdbc:mysql://192.168.1.211/liferay" | base64
    ```
